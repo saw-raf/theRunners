@@ -6,9 +6,10 @@ using namespace std;
 
 int main()
 {
-    Player R(2,2,'X');
+    Player R(0,0,'X');
     int key;
     R.show();
+	R.printPosition();
     do{
 		key = _getch();
 		if (key == 224 || key == 0)
@@ -34,7 +35,7 @@ int main()
 				break;
 
 			}
-			//R.printPosition(diamonds);
+			R.printPosition();
 		}
 
 	} while (key != KEY_ESC);

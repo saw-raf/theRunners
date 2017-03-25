@@ -1,5 +1,6 @@
 #pragma once
 #include "Classes.hpp"
+#include "functions.hpp"
 #include <iostream>
 using namespace std;
 
@@ -25,7 +26,7 @@ void Runner::moveUp()
 
 void Runner::moveDown()
 {
-    if(y<24)
+    if(y<23)
     {
         hide();
         y++;
@@ -76,5 +77,16 @@ Player::Player(int xPos, int yPos,char character)
 
 Player::~Player()
 {
+}
+
+void Player::printPosition()
+{
+	gotoxy(0, 24);
+	cout << "x: ";
+	cout.width(3);
+	cout << x;
+	cout << "  y: ";
+	cout.width(3);
+	cout << y;
 }
 

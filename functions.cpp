@@ -2,7 +2,7 @@
 #include "functions.hpp"
 #include <conio.h>
 
-//additional function needed in writeCharXY
+
 void gotoxy(int x, int y)
 {
      COORD c;

@@ -17,6 +17,8 @@ enum KEY_CODES
 
 void clearScreen();
 void writeCharXY(int x, int y, char code);
+//additional function needed in writeCharXY
+void gotoxy(int x, int y);
 
 
 

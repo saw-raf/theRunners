@@ -35,6 +35,7 @@ public:
     Player(int xPos,int yPos);
     Player(int xPos,int yPos, char character);
     ~Player();
+	void printPosition();
 };
 
 
