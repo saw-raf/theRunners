@@ -1,37 +1,45 @@
 #include "Classes.hpp"
 #include "functions.hpp"
-#include <iostream>
-#include <cstdio>
-#include <conio.h>
+
 using namespace std;
-
-
 
 int main()
 {
     Player R(2,2,'X');
-    char key;
-    key=cin.get();
-    cout<<(int)key<<endl;
-    /*key=getch();
-    do
-    {
-        R.show();
-        switch(key)
-        {
-            case KEY_UP:
-            R.moveUp();
-            break;
-            case KEY_DOWN:
-            R.moveDown();
-            break;
-            case KEY_LEFT:
-            R.moveLeft();
-            break;
-            case KEY_RIGHT:
-            R.moveRight();
-            break;
-        }
-    }while((key=getch())!=KEY_ESC);*/
+    int key;
+    R.show();
+    do{
+		key = _getch();
+		if (key == 224 || key == 0)
+		{
+			key = _getch();
+			switch (key)
+			{
+
+			case KEY_UP:
+				R.moveUp(map,portalPosY,portalPosX,diamonds);
+				break;
+
+			case KEY_DOWN:
+				R.moveDown(map, portalPosY, portalPosX, diamonds);
+				break;
+
+			case KEY_LEFT:
+				R.moveLeft(map, portalPosY, portalPosX, diamonds);
+				break;
+
+			case KEY_RIGHT:
+				R.moveRight(map, portalPosY, portalPosX, diamonds);
+				break;
+
+			}
+			R.printPosition(diamonds);
+		}
+
+	} while (key != KEY_ESC);
+
+	clearScreen();
+	gotoxy(0, 0);
+
     return 0;
 }
