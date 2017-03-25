@@ -1,3 +1,4 @@
+#pragma once
 #include "functions.hpp"
 #include <conio.h>
 

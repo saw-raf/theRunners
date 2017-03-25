@@ -1,3 +1,4 @@
+#pragma once
 #include "Classes.hpp"
 #include <iostream>
 using namespace std;

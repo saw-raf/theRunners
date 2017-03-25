@@ -1,5 +1,6 @@
 #include "Classes.hpp"
 #include "functions.hpp"
+#include <conio.h>
 
 using namespace std;
 
@@ -17,29 +18,29 @@ int main()
 			{
 
 			case KEY_UP:
-				R.moveUp(map,portalPosY,portalPosX,diamonds);
+				R.moveUp();
 				break;
 
 			case KEY_DOWN:
-				R.moveDown(map, portalPosY, portalPosX, diamonds);
+				R.moveDown();
 				break;
 
 			case KEY_LEFT:
-				R.moveLeft(map, portalPosY, portalPosX, diamonds);
+				R.moveLeft();
 				break;
 
 			case KEY_RIGHT:
-				R.moveRight(map, portalPosY, portalPosX, diamonds);
+				R.moveRight();
 				break;
 
 			}
-			R.printPosition(diamonds);
+			//R.printPosition(diamonds);
 		}
 
 	} while (key != KEY_ESC);
 
 	clearScreen();
-	gotoxy(0, 0);
+	//gotoxy(0, 0);
 
     return 0;
 }
